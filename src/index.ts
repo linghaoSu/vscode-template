@@ -3,10 +3,10 @@ import { commands } from 'vscode';
 import { disposeSettingListener, getSettings, initialSetting } from './settings';
 import { Log } from './log';
 import { getRelativePath } from './utils';
-import { getCommandName } from './constant';
+import { EXT_NAME, getCommandName } from './constant';
 
 export function activate() {
-  Log.info('extension activated! ');
+  Log.info(`${EXT_NAME} active!`);
   // start listening settings
   initialSetting();
 
@@ -25,5 +25,5 @@ export function activate() {
 export function deactivate() {
   disposeSettingListener();
 
-  Log.info('i18n auto replace deactivate! ');
+  Log.info(`${EXT_NAME} deactivate!`);
 }

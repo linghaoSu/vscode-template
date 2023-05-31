@@ -1,6 +1,5 @@
 import { type OutputChannel, window } from 'vscode';
-
-const EXT_NAME = 'I18n Auto Replace';
+import { EXT_NAME } from './constant';
 
 export class Log {
   private static _channel: OutputChannel;
